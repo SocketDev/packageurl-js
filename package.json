@@ -54,8 +54,8 @@
   "devDependencies": {
     "@eslint/compat": "^1.2.5",
     "@eslint/js": "^9.18.0",
-    "@socketregistry/yocto-spinner": "^1.0.2",
-    "@socketsecurity/registry": "^1.0.67",
+    "@socketregistry/yocto-spinner": "^1.0.3",
+    "@socketsecurity/registry": "^1.0.69",
     "all-the-package-names": "2.0.0",
     "all-the-package-names-v1.3905.0": "npm:all-the-package-names@1.3905.0",
     "eslint": "^9.18.0",
