@@ -39,9 +39,15 @@ module.exports = [
       ...importXPlugin.flatConfigs.recommended.languageOptions,
       ...nodePlugin.configs['flat/recommended-script'].languageOptions,
       ecmaVersion: LATEST,
-      globals: Object.fromEntries(
-        Object.entries(globals.node).map(([k]) => [k, 'readonly'])
-      ),
+      globals: {
+        ...js.configs.recommended.languageOptions?.globals,
+        ...importXPlugin.flatConfigs.recommended.languageOptions?.globals,
+        ...nodePlugin.configs['flat/recommended-script'].languageOptions
+          ?.globals,
+        ...Object.fromEntries(
+          Object.entries(globals.node).map(([k]) => [k, 'readonly'])
+        )
+      },
       sourceType: 'script'
     },
     linterOptions: {
